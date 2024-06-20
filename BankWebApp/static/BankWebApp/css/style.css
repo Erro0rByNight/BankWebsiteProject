@@ -1,0 +1,345 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(120deg,#000,#32174D);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+#nav-head {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.footer-div {
+    background-color: rgba(0, 0, 0, 0.489);
+    margin-top: 350px;
+    border: 50px;
+}
+
+.footer-div input {
+    background-color: #00000000;
+}
+
+.footer-div textarea {
+    background-color: #00000000;
+}
+
+.footer-div button {
+    border: 2px solid #fff;
+    background-color: #00000000;
+}
+
+.footer-div .ti-footer {
+    margin-top: 20px;
+}
+
+#nav-head nav {
+    background-color: rgba(0, 0, 0, 0.489);
+    margin-right: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+ul li a, .main-button {
+    position: relative;
+    display: block;
+    text-decoration: none!important;
+    text-transform: uppercase;
+    color: #fff!important;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.main-button {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 130px;
+}
+
+.main-button:hover {
+    background-color: #ffffff22;
+}
+
+header nav ul li {
+    margin-right: 8px; /* Space between menu items */
+}
+
+ul li a::before,
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+ul li a::before {
+    top: 0;
+}
+
+ul li a::after {
+    bottom: 0;
+}
+
+ul li a:hover::before,
+ul li a:hover::after {
+    width: 80%; 
+    left: 10%; 
+}
+
+main {
+    display: flex;
+    margin: 100px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main h2 {
+    margin-bottom: 10px;
+}
+
+.main-img {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.services .service .icon img {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+main .main-text p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main .main-text {
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    color: #fff;
+    font-weight: 900;
+}
+
+.services {
+    display: flex;
+    margin-top: 250px;
+    margin-bottom: 50px;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .service {
+    width: 470px;
+    margin: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers {
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 188px;
+    display: flex;
+    justify-content: center;
+}
+.customers .p {
+    margin-top: 70px;
+    margin-right: 25%;
+    width: 50%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg,#000,#32174D);
+    color: white;
+    border: 10px;
+    -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+    box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 75%;
+    max-width: 1200px;
+}
+.card {
+    justify-content: center;
+    width: calc(33.333% - 40px);
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.489);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 20px;
+    align-items: center;
+  }
+
+.card p {
+    font-size: small;
+    color: #fff;
+    margin-left: 5px;
+}
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+form {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.popup .form-control {
+    background-color: white;
+    color: black;
+}
+.popup .btn-primary {
+    background: linear-gradient(120deg,#000,#32174D);
+    color: #fff;
+    border-color: #32174D;
+}
+.popup .btn-primary:hover {
+    background-color: #f8f9fa;
+    color: #32174D;
+}
+
+@media (max-width: 1024px) {
+    .nav-links {
+        background: linear-gradient(160deg,#000,#32174D);
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .nav-links:last-child {
+        margin-top: 190px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+    .main-img img {
+        width: 200px;
+        height: 200px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .services {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .services .service {
+        margin-bottom: 40px;
+        width: 250px;
+    }
+    .services .description p {
+        width: 200px;
+    }
+    #nav-head {
+        width: 93%;
+    }
+    #nav-head nav {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        width: 300px;
+        height: 100%;
+    }
+}
